@@ -20,3 +20,19 @@
         text-align: center;
     }
 }
+
+@keyframes fadein {
+    from {
+        top:-50px;
+        opacity: 0;
+    }
+    to {
+        top:0;
+        opacity: 1;
+    }
+}
+
+.animation {
+    animation: fadein 1s;
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+}

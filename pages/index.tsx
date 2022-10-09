@@ -12,6 +12,10 @@ import Mercury from "./subpages/Mercury";
 import Venus from "./subpages/Venus";
 
 
+export interface Props {
+    isActive: boolean
+}
+
 
 SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard])
 

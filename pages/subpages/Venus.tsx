@@ -1,11 +1,10 @@
 import {NextPage} from "next";
 import styles from "./Main.module.css";
+import {Props} from "../index";
 
-const Page : NextPage = () => {
+const Page = (props: Props) => {
     return (<> <div className={styles.Info}>
-
-        <h1 style={{color: "white"}}>Project Venus</h1>
-
+        <h1 className={props.isActive ? styles.animation : ''} style={{color: "white"}}>Project Venus</h1>
     </div>
     </>)
 }
