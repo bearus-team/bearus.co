@@ -19,6 +19,9 @@ SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard])
 const Home: NextPage = () => {
   return (
     <>
+        <div style={{position: 'absolute', top: '0px', width: '100vw', height: '60px', backgroundColor: 'white', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            This is top bar
+        </div>
         <Swiper
             grabCursor={true}
             cubeEffect={{
@@ -37,7 +40,9 @@ const Home: NextPage = () => {
                 <Main/>
             </SwiperSlide>
             <SwiperSlide>
-                <Mercury/>
+                {({ isActive }) => (
+                    <Mercury isActive={isActive}/>
+                )}
             </SwiperSlide>
             <SwiperSlide>
                 <Venus/>
