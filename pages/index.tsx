@@ -5,9 +5,9 @@ import SwiperCore, {
   Pagination,
   Navigation,
 } from "swiper";
-import Main from "./subpages/Main";
-import Mercury from "./subpages/Mercury";
-import Venus from "./subpages/Venus";
+import Main from "../subpages/Main";
+import Mercury from "../subpages/Mercury";
+import Venus from "../subpages/Venus";
 
 SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard]);
 
