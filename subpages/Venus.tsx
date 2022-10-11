@@ -1,15 +1,18 @@
-import styles from "./Main.module.css";
-import PageProps from "./PageProps";
+import ScrollAnimation from "react-animate-on-scroll";
+import styles from "./Venus.module.css";
 
-function Page({ isActive }: PageProps) {
+function Page() {
   return (
-    <div className={styles.Info}>
-      <h1
-        className={isActive ? styles.animation : ""}
-        style={{ color: "white" }}
+    <div className={styles.Venus}>
+      <ScrollAnimation
+        animateIn="animate__fadeInDown"
+        style={{ marginTop: "300px" }}
       >
-        Project Venus
-      </h1>
+        <h1>Project Venus</h1>
+        <div>
+          <h1>Work In Progress</h1>
+        </div>
+      </ScrollAnimation>
     </div>
   );
 }

@@ -1,21 +1,19 @@
+import ScrollAnimation from "react-animate-on-scroll";
 import styles from "./Main.module.css";
-import PageProps from "./PageProps";
+import "animate.css/animate.min.css";
 
-function Page({ isActive }: PageProps) {
+function Page() {
   return (
     <div className={styles.Info}>
-      <div
-        style={{
-          color: "black",
-          fontSize: "48px",
-        }}
-      >
-        <div className={isActive ? styles.animation : ""}>
-          빠른 행동과 실험을 통해
-        </div>
-        <div className={isActive ? styles.animationDelay : ""}>
-          세상을 바꾸는 스타트업
-        </div>
+      <div className={styles.Main} />
+      <div className={styles.Content}>
+        <ScrollAnimation
+          animateIn="animate__fadeInDown"
+          style={{ marginTop: "300px" }}
+        >
+          <div>빠른 행동과 실험을 통해</div>
+          <div>세상을 바꾸는 스타트업</div>
+        </ScrollAnimation>
       </div>
     </div>
   );

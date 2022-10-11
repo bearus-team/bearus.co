@@ -2,56 +2,35 @@
     text-align: center;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     flex-direction: row-reverse;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
 }
 
-
-@media screen and (max-width: 1132px) {
-    .Info {
-        flex-direction: column-reverse;
-        justify-content: center;
-    }
-
-    .Info-header {
-        text-align: center;
-    }
+.Main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/building.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(10px) brightness(60%);
+    -webkit-filter: blur(5px) brightness(120%);
+    transform: scale(1.1);
 }
 
-@keyframes fadein {
-    from {
-        top: -50px;
-        opacity: 0;
-    }
-    to {
-        top: 0;
-        opacity: 1;
-    }
-}
-
-.animation {
-    animation: fadein 2s;
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-}
-
-.animationDelay {
-    animation: 3s ease 0s normal forwards 1 fadein2;
-    -webkit-animation: 3s ease 0s normal forwards 1 fadein2;
-    opacity: 1
-}
-
-@keyframes fadein2 {
-    0% {
-        opacity: 0
-    }
-    35% {
-        opacity: 0
-    }
-    100% {
-        opacity: 1
-    }
+.Content {
+    color: black;
+    font-size: 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-weight: 600;
 }
