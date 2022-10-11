@@ -5,6 +5,7 @@ import Venus from "../subpages/Venus";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 import styles from "./index.module.css";
+import Description from "../subpages/Description";
 
 function Home() {
   const [isBorderVisible, setBorderVisible] = useState(false);
@@ -42,6 +43,7 @@ function Home() {
         </div>
       </div>
       <Main />
+      <Description />
       <Mercury refer={ref} />
       <Venus />
       <Footer />
