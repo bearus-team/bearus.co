@@ -2,10 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import Main from "../subpages/Main";
 import Mercury from "../subpages/Mercury";
 import Venus from "../subpages/Venus";
-import Footer from "../components/Footer";
-import Logo from "../components/Logo";
-import styles from "./index.module.css";
 import Description from "../subpages/Description";
+import MainLayout from "../layouts/MainLayout";
 
 function Home() {
   const [isBorderVisible, setBorderVisible] = useState(false);
@@ -28,26 +26,12 @@ function Home() {
     };
   }, [isBorderVisible]);
   return (
-    <div className="App">
-      <div
-        className={`${styles.navBarFrame} border-bottom ${
-          isBorderVisible ? "border-bottom-color" : ""
-        }`}
-      >
-        <Logo fontSize="28px" />
-        <div className={styles.navBarFrameMenu}>
-          <div>베어어스</div>
-          <div>프로젝트</div>
-          <div>커뮤니티</div>
-          <div>자주 묻는 질문</div>
-        </div>
-      </div>
+    <MainLayout isBorderVisible={isBorderVisible}>
       <Main />
       <Description />
       <Mercury refer={ref} />
       <Venus />
-      <Footer />
-    </div>
+    </MainLayout>
   );
 }
 
