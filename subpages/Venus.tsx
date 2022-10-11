@@ -6,11 +6,11 @@ function Page() {
     <div className={styles.Venus}>
       <ScrollAnimation
         animateIn="animate__fadeInDown"
-        style={{ marginTop: "300px" }}
+        style={{ marginTop: "300px", textAlign: "center" }}
       >
-        <h1>Project Venus</h1>
+        <h1>Codename Venus</h1>
         <div>
-          <h1>Work In Progress</h1>
+          <h1>Work In Progress (2022/10~)</h1>
         </div>
       </ScrollAnimation>
     </div>
