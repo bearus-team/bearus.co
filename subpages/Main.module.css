@@ -7,7 +7,7 @@
     flex-direction: row-reverse;
     width: 100%;
     height: 100%;
-    background-color: #212121;
+
 }
 
 
@@ -16,6 +16,7 @@
         flex-direction: column-reverse;
         justify-content: center;
     }
+
     .Info-header {
         text-align: center;
     }
@@ -23,16 +24,34 @@
 
 @keyframes fadein {
     from {
-        top:-50px;
+        top: -50px;
         opacity: 0;
     }
     to {
-        top:0;
+        top: 0;
         opacity: 1;
     }
 }
 
 .animation {
-    animation: fadein 1s;
-    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    animation: fadein 2s;
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+}
+
+.animationDelay {
+    animation: 3s ease 0s normal forwards 1 fadein2;
+    -webkit-animation: 3s ease 0s normal forwards 1 fadein2;
+    opacity: 1
+}
+
+@keyframes fadein2 {
+    0% {
+        opacity: 0
+    }
+    35% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
 }

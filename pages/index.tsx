@@ -4,12 +4,14 @@ import SwiperCore, {
   Mousewheel,
   Pagination,
   Navigation,
+  EffectFlip,
+  EffectFade,
 } from "swiper";
 import Main from "../subpages/Main";
 import Mercury from "../subpages/Mercury";
 import Venus from "../subpages/Venus";
 
-SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard]);
+SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard, EffectFade]);
 
 function Home() {
   return (
@@ -24,13 +26,29 @@ function Home() {
           zIndex: 1000,
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "space-between",
+          padding: "0px 200px 0px 200px",
         }}
       >
-        This is top bar
+        <div style={{ fontSize: "24px" }}>bearus.co</div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "40px",
+          }}
+        >
+          <div>메인메뉴</div>
+          <div>도움말</div>
+          <div>소개</div>
+          <div>엄준식</div>
+          <div>화이팅</div>
+        </div>
       </div>
       <Swiper
         grabCursor
+        effect="fade"
         cubeEffect={{
           shadow: true,
           slideShadows: true,
